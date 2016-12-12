@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'papers'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
-    'ckeditor_uploader',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -79,13 +80,14 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME': 'welfarestate',
-'USER': 'service-welfarestate',
-'PASSWORD': '%!v#W0HP +7}m2Cd_]96',
-'HOST': '127.0.0.1',
-'PORT': '5432',
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'welfarestate',
+    'USER': 'service_welfarestate',
+    'PASSWORD': '%!v#W0HP +7}m2Cd_]96',
+    'HOST': '127.0.0.1',
+    'PORT': '5432',
+    }
 }
 
 
@@ -126,3 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR + STATIC_URL
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR + MEDIA_URL
+CKEDITOR_UPLOAD_PATH = 'uploads/'
